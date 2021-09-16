@@ -109,9 +109,9 @@ class PPOPolicy(actor_policy.ActorPolicy):
     nest_utils.assert_value_spec(
         value_output_spec, 'value_network')
 
-    distribution_utils.assert_specs_are_compatible(
-        actor_output_spec, action_spec,
-        'actor_network output spec does not match action spec')
+    # distribution_utils.assert_specs_are_compatible(
+    #     actor_output_spec, action_spec,
+    #     'actor_network output spec does not match action spec')
 
     self._compute_value_and_advantage_in_train = (
         compute_value_and_advantage_in_train)
